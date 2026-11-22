@@ -1,0 +1,16 @@
+name: Feature request
+description: Propose a change to Spendwise
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What outcome would help?
+    validations:
+      required: true

@@ -1,0 +1,49 @@
+name: README screenshots
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    env:
+      APP_ENV: local
+      APP_URL: http://127.0.0.1:8000
+      DB_CONNECTION: sqlite
+      CACHE_STORE: array
+    steps:
+      - uses: actions/checkout@v6
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: bcmath, pdo_sqlite
+          coverage: none
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: composer install --no-interaction --prefer-dist
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Capture seeded preview
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+          export DB_DATABASE="$RUNNER_TEMP/spendwise-readme.sqlite"
+          touch "$DB_DATABASE"
+          php artisan migrate --seed --force
+          seed_output="$RUNNER_TEMP/spendwise-demo-seed.txt"
+          php artisan db:seed --class=DemoSeeder --no-ansi > "$seed_output"
+          php artisan serve --host=127.0.0.1 --port=8000 --no-reload &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true; rm -f "$seed_output"' EXIT
+          curl --retry 12 --retry-connrefused --retry-delay 1 --fail --silent "$APP_URL/up"
+          SPENDWISE_DEMO_PASSWORD="$(sed -n 's/^Generated demo password: //p' "$seed_output")" npm run screenshots
+      - uses: actions/upload-artifact@v4
+        with:
+          name: readme-screenshots
+          path: |
+            README.md
+            docs/screenshots/*.png
+          if-no-files-found: error
