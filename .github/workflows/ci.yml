@@ -1,0 +1,59 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: spendwise_test
+          POSTGRES_USER: spendwise
+          POSTGRES_PASSWORD: ci-only
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U spendwise -d spendwise_test"
+          --health-interval 5s --health-timeout 3s --health-retries 12
+    env:
+      DB_CONNECTION: pgsql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 5432
+      DB_DATABASE: spendwise_test
+      DB_USERNAME: spendwise
+      DB_PASSWORD: ci-only
+    steps:
+      - uses: actions/checkout@v6
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: bcmath, pdo_pgsql
+          coverage: none
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: composer install --no-interaction --prefer-dist
+      - run: cp .env.example .env
+      - run: php artisan key:generate
+      - run: vendor/bin/pint --test
+      - run: php artisan test
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: php artisan migrate --seed --force
+      - name: Browser tests
+        env:
+          APP_URL: http://127.0.0.1:8074
+        run: |
+          php artisan serve --host=127.0.0.1 --port=8074 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          curl --retry 12 --retry-connrefused --retry-delay 1 --fail --silent "$APP_URL/up"
+          npm run test:browser

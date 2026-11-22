@@ -1,0 +1,51 @@
+x-spendwise: &spendwise
+    image: spendwise:local
+    build:
+        context: .
+    profiles: ["container"]
+    env_file: .env
+    environment:
+        DB_HOST: db
+        DB_PORT: 5432
+        DB_CONNECTION: pgsql
+    depends_on:
+        db:
+            condition: service_healthy
+    volumes:
+        - private_files:/var/www/html/storage/app/private
+
+services:
+    db:
+        image: postgres:17-alpine
+        environment:
+            POSTGRES_DB: ${DB_DATABASE:-spendwise}
+            POSTGRES_USER: ${DB_USERNAME:-spendwise}
+            POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+        ports:
+            - "127.0.0.1:${DB_PORT:-5432}:5432"
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+            interval: 5s
+            timeout: 3s
+            retries: 12
+        volumes:
+            - postgres:/var/lib/postgresql/data
+
+    app:
+        <<: *spendwise
+        ports:
+            - "127.0.0.1:${APP_PORT:-8000}:80"
+
+    queue:
+        <<: *spendwise
+        user: www-data
+        command: ["php", "artisan", "queue:work", "--tries=3"]
+
+    schedule:
+        <<: *spendwise
+        user: www-data
+        command: ["php", "artisan", "schedule:work"]
+
+volumes:
+    postgres:
+    private_files:

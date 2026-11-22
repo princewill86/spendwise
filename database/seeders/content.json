@@ -1,0 +1,417 @@
+{
+  "home": {
+    "title": "See where your money goes.",
+    "description": "Track income and expenses across your accounts with Spendwise, an open-source personal finance workspace.",
+    "content": {
+      "eyebrow": "A clearer view of your finances",
+      "intro": "Bring your accounts and transactions together, see what’s coming in and going out, and make your next money decision with context.",
+      "features": [
+        {
+          "title": "See the whole picture",
+          "body": "Keep cash, bank accounts, and wallets together in one workspace."
+        },
+        {
+          "title": "Know what you spend",
+          "body": "Organize income and expenses by category and review the activity behind each total."
+        },
+        {
+          "title": "Keep transfers clear",
+          "body": "Move money between tracked accounts without inflating your income or spending."
+        },
+        {
+          "title": "Plan spending around your priorities",
+          "body": "Set a weekly, monthly, or custom budget and track the expenses that count toward it."
+        },
+        {
+          "title": "Build toward a savings goal",
+          "body": "Track contributions and withdrawals for the things you want to save for."
+        },
+        {
+          "title": "See what is due next",
+          "body": "Use recurring schedules for predictable income and bills, with a calendar that shows upcoming activity."
+        }
+      ],
+      "steps": [
+        "Add your accounts and opening balances.",
+        "Record income, expenses and transfers.",
+        "Review your activity and account balances."
+      ]
+    }
+  },
+  "features": {
+    "title": "Features",
+    "description": "Explore the Spendwise workspace.",
+    "content": {
+      "sections": [
+        {
+          "title": "Accounts and transactions",
+          "body": "Track balances, record activity, and organize income and expenses by category."
+        },
+        {
+          "title": "Transfer history",
+          "body": "Track both sides of a move between accounts in the ledger."
+        },
+        {
+          "title": "Budgets and savings",
+          "body": "Set spending limits, check progress, and track savings contributions separately from account balances."
+        },
+        {
+          "title": "Recurring activity and reports",
+          "body": "Manage scheduled transactions, review trends, and export your records."
+        },
+        {
+          "title": "Import with a preview",
+          "body": "Map CSV columns to date, description, and amount, then review the valid, duplicate, and invalid rows before confirming. Choose the destination account so imported entries use the correct currency."
+        },
+        {
+          "title": "Reconcile balances and keep receipts",
+          "body": "Compare a tracked balance with your actual balance and record an adjustment for the difference. Attach a receipt to a transaction and download it later from your workspace."
+        },
+        {
+          "title": "Work with more than one currency",
+          "body": "Record amounts in each account’s original currency. When rates are configured and available, view an estimated combined balance and the quotes used to calculate it."
+        },
+        {
+          "title": "Manage access and export records",
+          "body": "Review active sessions, enable authenticator-based two-factor authentication where available, and export transactions, accounts, budgets, and reports as CSV."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Spendwise",
+    "description": "Learn how Spendwise helps individuals, freelancers, and households track their money, plan spending, and manage their financial records.",
+    "content": {
+      "sections": [
+        {
+          "title": "Personal finance in one place",
+          "body": "Spendwise is an open-source personal finance workspace. It brings your accounts, spending, budgets, and savings goals together so you can see where your money goes and plan what to do next."
+        },
+        {
+          "title": "Who Spendwise is for",
+          "body": "Spendwise is for people who want a clearer view of their everyday finances. If you earn a regular salary, you can see how much is left after bills and everyday spending. If you freelance, you can record income as it arrives and compare it with what you spend over the same period. You can also use one workspace to track the accounts and expenses you manage for your household."
+        },
+        {
+          "title": "Keep a record of the money you manage",
+          "body": "Start by adding an account for each bank account, cash wallet, or savings balance you want to track. Enter an opening balance, then record income and expenses manually or import them from a CSV you can review before confirming. Categorize transactions to see where you spend. When money moves between two tracked accounts, record a transfer so both balances update and the movement stays out of your income and spending totals."
+        },
+        {
+          "title": "Plan ahead for bills, budgets, and savings",
+          "body": "Set a weekly, monthly, or custom budget for overall spending or a category such as groceries. Record savings contributions and withdrawals against a goal, such as an emergency fund, to see how close you are to your target. Savings goals track your progress separately from account balances. Use recurring rules and the financial calendar to track regular bills and income."
+        },
+        {
+          "title": "Understand your balances and cash flow",
+          "body": "The dashboard shows account balances alongside income, expenses, and net cash flow for a period you choose. Reports let you explore spending by category and compare activity across months. Each account keeps its original currency. When conversion is enabled and the necessary exchange rates are available, Spendwise can show an estimated combined balance and identify the rates it used."
+        },
+        {
+          "title": "Control your records and account access",
+          "body": "You choose which financial information to enter. Manual tracking works without connecting a bank account or sharing bank login credentials. In Personal settings, you can manage active sessions, set up authenticator-based two-factor authentication when it is available, export your data, or request account deletion."
+        },
+        {
+          "title": "Run your own copy",
+          "body": "Spendwise is open source. You can run your own installation and control where your data is hosted. The project documentation covers installation, email delivery, backups, and the scheduler that processes recurring transactions."
+        }
+      ]
+    }
+  },
+  "how-it-works": {
+    "title": "How it works",
+    "description": "Get started with Spendwise.",
+    "content": {
+      "sections": [
+        {
+          "title": "Add an account",
+          "body": "Start with a wallet or bank account and enter its opening balance."
+        },
+        {
+          "title": "Record activity",
+          "body": "Add income, expenses, and transfers to maintain an accurate record."
+        },
+        {
+          "title": "Start from a statement or spreadsheet",
+          "body": "If you already have a CSV, choose the account it belongs to and map the date, description, and amount columns. Review the preview before confirming. Use the same account’s opening balance when reconciling the result with your records."
+        },
+        {
+          "title": "Add a budget or savings goal",
+          "body": "Choose a budget period and spending limit. Record goal contributions separately to track progress toward a savings target."
+        },
+        {
+          "title": "Schedule regular activity",
+          "body": "Add recurring rules for predictable income or bills. The calendar shows upcoming activity, and the scheduler posts due entries on installations where it is running."
+        },
+        {
+          "title": "Review your reports",
+          "body": "Select a reporting period and compare income, expenses, and net cash flow. Filter reports by account, category, or currency to investigate changes, or export a copy for your records."
+        }
+      ]
+    }
+  },
+  "security": {
+    "title": "Security and privacy",
+    "description": "Learn how Spendwise handles account access.",
+    "content": {
+      "sections": [
+        {
+          "title": "Control account access",
+          "body": "Use a unique password and verify your email address. Spendwise uses authenticated sessions to protect your workspace."
+        },
+        {
+          "title": "Manual tracking",
+          "body": "Spendwise records the account information you enter. Keep bank credentials and card security codes out of the workspace."
+        },
+        {
+          "title": "Add a second factor",
+          "body": "When the operator enables two-factor authentication, you can set up a time-based authenticator from Personal settings. Keep recovery codes somewhere secure so you can use them if you lose access to your authenticator."
+        },
+        {
+          "title": "Review sessions and protect sensitive actions",
+          "body": "Personal settings shows active sessions on installations that use database-backed sessions. You can end another session after confirming your password. Email changes and account deletion requests also require password confirmation."
+        },
+        {
+          "title": "How workspace files and records are protected",
+          "body": "Downloads of financial receipts require a signed-in user with access to the associated transaction. Administrators manage users and platform settings through separate permissions. The operator is responsible for HTTPS, backups, and access to hosting infrastructure."
+        },
+        {
+          "title": "Report a security concern",
+          "body": "Use the project’s Security Policy for private vulnerability reporting. If the concern is about your account or a specific installation, contact that installation’s operator."
+        }
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "description": "Answers about Spendwise.",
+    "content": {
+      "sections": [
+        {
+          "title": "Does Spendwise connect to my bank?",
+          "body": "Spendwise is designed for manual tracking. You can create an account to represent a bank account, wallet, or cash balance."
+        },
+        {
+          "title": "Can I run my own instance?",
+          "body": "The project is open source and the repository contains local setup guidance."
+        },
+        {
+          "title": "How do I get started?",
+          "body": "Add a financial account and its opening balance, then record your income and expenses or import them from a CSV file."
+        },
+        {
+          "title": "Do transfers count as income or spending?",
+          "body": "Transfers update the balances of both accounts. Spendwise excludes transfers from income, expenses, and budget spending."
+        },
+        {
+          "title": "Can I track accounts in different currencies?",
+          "body": "Yes. Each account keeps its own currency. Spendwise shows an estimated combined balance in your preferred currency when conversion is enabled and the required exchange rates are available."
+        },
+        {
+          "title": "Can I import transactions from a spreadsheet?",
+          "body": "Yes. Save the spreadsheet as a CSV file, upload it, and select the columns for the date, description, and amount. You can review invalid or duplicate rows before confirming the import."
+        },
+        {
+          "title": "How do budgets and savings goals work?",
+          "body": "Budgets track eligible expenses against a spending limit for a period you choose. Savings goals track the contributions and withdrawals you record separately from your account balances."
+        },
+        {
+          "title": "Can Spendwise record regular bills automatically?",
+          "body": "Yes. Create a recurring rule for a bill or regular income. On installations with the scheduler running, active rules post transactions when they’re due. You can pause or cancel a rule any time."
+        },
+        {
+          "title": "Can I download or delete my data?",
+          "body": "In Personal settings, open Privacy to download an export or request account deletion. An administrator reviews deletion requests, and you can withdraw a request before it’s approved."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Find the right way to reach the Spendwise project.",
+    "content": {
+      "sections": [
+        {
+          "title": "Project support",
+          "body": "Use the GitHub repository for general questions and feature requests. Keep financial records and account information out of public reports."
+        },
+        {
+          "title": "Help with your account",
+          "body": "Contact the operator of the Spendwise installation you use for sign-in issues, account deletion, or questions about your data. If a contact form is available below, use it and include the date and a short description of the issue."
+        },
+        {
+          "title": "Report a bug or request a feature",
+          "body": "For project issues, describe what you expected, what happened, and how to reproduce it with sample data. You can include a redacted screenshot if it helps explain the problem."
+        },
+        {
+          "title": "Security and private information",
+          "body": "Follow the project’s Security Policy to report vulnerabilities privately. Leave passwords, verification links, recovery codes, account balances, and transaction details out of contact messages and public issues."
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "description": "How Spendwise handles personal information.",
+    "content": {
+      "sections": [
+        {
+          "title": "Information used by the service",
+          "body": "Spendwise uses the name, email, and financial records you enter to provide your workspace. Authentication cookies support sign-in and session security."
+        },
+        {
+          "title": "Hosting and service operators",
+          "body": "The operator of an individual Spendwise installation controls its infrastructure, email delivery, and data retention."
+        },
+        {
+          "title": "What information Spendwise handles",
+          "body": "Your workspace can include your name and email address, profile image, preferences, accounts, transactions, budgets, savings goals, recurring rules, and receipts you upload. Import previews may temporarily hold parsed CSV rows before you confirm the import. Profile images, receipts, and financial entries depend on what you choose to provide."
+        },
+        {
+          "title": "How we use workspace information",
+          "body": "Spendwise uses your entries to maintain balances, calculate reports, evaluate budgets, and post recurring transactions when scheduling is enabled. Your email address supports account verification, password recovery, and alerts you choose to receive when email delivery is configured. A message sent through the contact form goes to the operator’s configured contact address."
+        },
+        {
+          "title": "Account and service activity",
+          "body": "Spendwise maintains session records to support sign-in and session controls. Administrative audit records can include the action, time, administrator, target, and IP address where available. Email delivery records track the template and delivery status. The Cookie Policy explains how the browser stores sign-in and theme information."
+        },
+        {
+          "title": "Who can access information",
+          "body": "Workspace routes restrict financial data to the signed-in user. The admin console shows member account details and aggregate platform counts. The installation operator manages the underlying database, private storage, and backups. A configured mail provider processes messages sent through it. The exchange-rate feed fetches currency quotes without sending your transaction history."
+        },
+        {
+          "title": "Retention and deletion",
+          "body": "The installation operator sets backup and retention practices. Unconfirmed CSV previews expire according to the installation’s preview-retention setting. After confirmation, the import history keeps the recorded and skipped counts and discards the raw preview. See the Data Deletion Policy for what happens when an account deletion request is approved."
+        },
+        {
+          "title": "Your choices and questions",
+          "body": "You can update your profile and alert preferences, review and end sessions, and export your personal data. To request deletion, open Privacy in Personal settings. Use the Contact page to reach the installation operator for questions about data handling, hosting, or applicable privacy rights."
+        }
+      ]
+    }
+  },
+  "terms": {
+    "title": "Terms of service",
+    "description": "Terms for using Spendwise.",
+    "content": {
+      "sections": [
+        {
+          "title": "Service scope",
+          "body": "Spendwise provides personal finance tracking. You are responsible for verifying the records you enter and decisions based on those records."
+        },
+        {
+          "title": "Account access",
+          "body": "Keep your credentials private and use the service only for information you are authorized to manage."
+        },
+        {
+          "title": "Your account and your records",
+          "body": "Use an email address you can access so you can verify your account and recover access. Keep your password and any recovery codes private. Only enter or upload records you are authorized to manage. If you suspect someone has accessed your account, change your password, review active sessions, and contact the installation operator."
+        },
+        {
+          "title": "Financial information and estimates",
+          "body": "Spendwise organizes the records you enter. It does not hold funds, move money at a bank, or provide financial, tax, or investment advice. Reports depend on the accuracy and completeness of your records. Converted balances are estimates based on available exchange rates. Check important figures against your original statements before relying on them."
+        },
+        {
+          "title": "Features and service availability",
+          "body": "Email delivery, scheduled transactions, and currency conversion depend on how the installation is configured. Maintenance and outages can affect access. Keep your original financial records and check that automation has run before relying on a scheduled entry."
+        },
+        {
+          "title": "Acceptable use and account access",
+          "body": "The Acceptable Use Policy explains which uses are prohibited. The installation operator may restrict access where necessary to protect users or the service. If your access is restricted, contact the operator to ask about the decision and access to your records."
+        },
+        {
+          "title": "Exports and account closure",
+          "body": "You can export personal data from Personal settings and download financial reports separately. If you want to close your account, export what you need before submitting a deletion request. The Data Deletion Policy explains the review process and what happens after approval."
+        },
+        {
+          "title": "Questions and installation terms",
+          "body": "The operator of the Spendwise installation you use is your contact for account questions, hosting arrangements, and any additional terms that apply to that installation. The project repository contains the open-source license for the software."
+        }
+      ]
+    }
+  },
+  "cookies": {
+    "title": "Cookie policy",
+    "description": "Learn how Spendwise uses cookies.",
+    "content": {
+      "sections": [
+        {
+          "title": "Session cookies",
+          "body": "Session cookies support sign-in and request verification. The remember-me option stores a longer-lived sign-in cookie. The theme picker stores its selection in local browser storage."
+        },
+        {
+          "title": "Request verification",
+          "body": "The XSRF-TOKEN cookie helps Spendwise verify that requests to change account or workspace data came from the current browser session. The application uses it for actions such as saving a transaction or changing preferences."
+        },
+        {
+          "title": "Session and remembered sign-in",
+          "body": "The session cookie connects requests to your session. The installation operator configures session lifetime. If you select “Keep me signed in,” the browser also stores a longer-lived sign-in cookie. Use Sign out when you finish on a shared device."
+        },
+        {
+          "title": "Theme preference",
+          "body": "The browser saves your selected theme in local storage. If you choose System, Spendwise follows your device’s appearance setting. Signed-in users can also save a theme preference to their account."
+        },
+        {
+          "title": "Managing browser storage",
+          "body": "Your browser can remove or block cookies and local storage. Clearing site data may sign you out and reset the theme saved on that device. Blocking cookies can prevent sign-in and actions that require request verification."
+        }
+      ]
+    }
+  },
+  "data-deletion": {
+    "title": "Data deletion policy",
+    "description": "How to request deletion of Spendwise data.",
+    "content": {
+      "sections": [
+        {
+          "title": "Requesting deletion",
+          "body": "Open the Privacy section in Personal settings, enter your password, and submit a deletion request. You can withdraw the request until the operator approves it."
+        },
+        {
+          "title": "After approval",
+          "body": "The active account, financial records, and uploaded attachments are removed. Backups may retain copies until they expire under the hosting operator’s backup policy."
+        },
+        {
+          "title": "Before you submit a request",
+          "body": "Download your personal data from the Privacy section in Personal settings. The JSON export includes receipt metadata. Download original receipt files from their transactions and save any CSV or printable reports you want to keep."
+        },
+        {
+          "title": "How a request is reviewed",
+          "body": "Confirm your password to submit a deletion request. An administrator reviews the request. If you change your mind while it is pending, you can withdraw it in Personal settings. An administrator must transfer their platform role before requesting deletion of their own account."
+        },
+        {
+          "title": "What happens to backups and operational records",
+          "body": "The hosting operator controls when backups expire. Operational records, such as audit events or email delivery status, may remain after an account is removed. Contact the operator for the retention policy for the installation you use."
+        },
+        {
+          "title": "If you cannot sign in",
+          "body": "Try password recovery using your verified email address. If you still cannot access your account, use the Contact page to reach the operator. The operator may ask you to confirm your identity before acting on the request."
+        }
+      ]
+    }
+  },
+  "acceptable-use": {
+    "title": "Acceptable use policy",
+    "description": "Rules for using Spendwise responsibly.",
+    "content": {
+      "sections": [
+        {
+          "title": "Use the service responsibly",
+          "body": "Use Spendwise only for information you are permitted to manage. Respect the privacy of others and avoid activities that interfere with the availability or integrity of the service."
+        },
+        {
+          "title": "Respect account and data boundaries",
+          "body": "Access only accounts and records you are authorized to use. Do not impersonate another person, share someone else’s private financial information without permission, or attempt to bypass sign-in or access controls."
+        },
+        {
+          "title": "Upload appropriate files",
+          "body": "Only upload CSV files, receipts, and profile images you have permission to use. Do not upload malicious files or include bank passwords, card security codes, or other credentials in records, attachments, or messages."
+        },
+        {
+          "title": "Protect service availability",
+          "body": "Do not interfere with the service, send abusive traffic, or use automation to evade rate limits. If you discover a security issue, follow the project’s private reporting process."
+        },
+        {
+          "title": "Report abuse privately",
+          "body": "Contact the installation operator about suspected misuse or compromised accounts. Describe the issue and include relevant dates or error messages. Keep passwords, verification links, and personal financial records out of public reports."
+        }
+      ]
+    }
+  }
+}
