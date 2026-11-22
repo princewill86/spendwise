@@ -40,7 +40,7 @@ jobs:
           trap 'kill "$server" 2>/dev/null || true; rm -f "$seed_output"' EXIT
           curl --retry 12 --retry-connrefused --retry-delay 1 --fail --silent "$APP_URL/up"
           SPENDWISE_DEMO_PASSWORD="$(sed -n 's/^Generated demo password: //p' "$seed_output")" npm run screenshots
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: readme-screenshots
           path: |
